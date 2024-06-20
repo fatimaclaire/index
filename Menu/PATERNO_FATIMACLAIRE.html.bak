@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Paterno_Activity2</title>
+<link rel="stylesheet" type="text/css" href="Pcss.css">
+
+
+</head>
+<body>
+
+<header>
+    <h1>Sinasayan sa Gigilid</h1><br><br>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#main-dish">Main Dish</a></li>
+            <li><a href="#vegetable">Vegetable</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+            <li><a href="#add-ons">Add-ons</a></li>
+		    <li><a href="#orders">Orders</a></li> 
+        </ul>
+    </nav>
+</header>
+
+	
+
+	
+
+<main id="main-content" class="container">
+   
+ <section id="main-dish" class="category">
+    <h2>Main Dish</h2>
+    <div class="menu-item">
+       <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+        <img src="Menu/Sinigang.jpg" alt="Main Dish 1">
+        <div class="item-details">
+            <h3>Sinigang na Baboy</h3>
+            <p>Php. 150.00</p>
+              <input class="tb" type="number" name="item1_quantity" min="0">
+        </div>
+    </div>
+    <br>
+    
+    <div class="menu-item">
+        <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+        <img src="Menu/Adobo.jpg" alt="Main Dish 2">
+        <div class="item-details">
+            <h3>Adobong Manok</h3>
+            <p>Php. 120.00</p>
+            <input class="tb" type="number" name="item1_quantity"  min="0">
+        </div>
+    </div>
+    <br>
+	
+    <div class="menu-item">
+        <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+        <img src="Menu/Kaldereta.jpg" alt="Main Dish 3">
+        <div class="item-details">
+            <h3>Kalderetang Baka</h3>
+            <p>Php. 250.00</p>
+             <input class="tb" type="number" name="item1_quantity"  min="0">
+        </div>
+    </div>
+    <br>
+    <div class="menu-item">
+        <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+        <img src="Menu/tinola.jpg" alt="Main Dish 4">
+        <div class="item-details">
+            <h3>Tinolang Manok</h3>
+            <p>Php. 150.00</p>
+            <input class="tb" type="number" name="item1_quantity"  min="0">
+        </div>
+    </div>
+    <br>
+    <div class="menu-item">
+        <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+        <img src="Menu/Inasal.jpg" alt="Main Dish 5">
+        <div class="item-details">
+            <h3>Chicken Inasal</h3>
+            <p>Php. 130.00</p>
+            <input class="tb" type="number" name="item1_quantity" min="0">
+        </div>
+    </div>
+</section>
+<br>
+
+
+
+
+    <section id="vegetable" class="category">
+        <h2>Vegetable</h2>
+        <div class="menu-item">
+		 <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/Bulanglang.jpg" alt="Vegetable 1">
+            <div class="item-details">
+                <h3>Bulanglang</h3>
+                <p>Php. 100.00</p>
+                 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+		
+        <div class="menu-item">
+		 <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/Pinakbet.jpg" alt="Vegetable 2">
+            <div class="item-details">
+                <h3>Pinakbet</h3>
+                <p>Php. 200.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/Kare.jpg" alt="Vegetable 3">
+            <div class="item-details">
+                <h3>Kare-kare</h3>
+                <p>Php. 300.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		 <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/LG.jpg" alt="Vegetable 4">
+            <div class="item-details">
+                <h3>Lumpiang Gulay</h3>
+                <p>Php. 30.00/piece</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/AK.jpg" alt="Vegetable 5">
+            <div class="item-details">
+                <h3>Adobong Kangkong</h3>
+                <p>Php. 175.00</p>
+				 <input class="tb" type="number" name="item1_quantity" min="0">
+            </div>
+        </div>
+    </section>
+<br>
+
+
+
+    <section id="desserts" class="category">
+        <h2>Desserts</h2>
+        <div class="menu-item">
+		 <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/halo.jpg" alt="Dessert 1">
+            <div class="item-details">
+                <h3>Halo-halo</h3>
+                <p>Php. 50.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/lecheflan.jpg" alt="Dessert 2">
+            <div class="item-details">
+                <h3>Leche Flan</h3>
+                <p>Php. 160.00</p>
+				<input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/mais.jpg" alt="Dessert 3">
+            <div class="item-details">
+                <h3>Mais Con Yelo</h3>
+                <p>Php. 50.00</p>
+				 <input class="tb" type="number" name="item1_quantity" min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		 <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/mango.jpg" alt="Dessert 4">
+            <div class="item-details">
+                <h3>Mango Tapioca</h3>
+                <p>Php. 75.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/Ube.jpg" alt="Dessert 5">
+            <div class="item-details">
+                <h3>Ube Halaya</h3>
+                <p>Php. 150.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+    </section>
+	<br>
+
+
+    <section id="drinks" class="category">
+        <h2>Drinks</h2>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/calamansij.jpg" alt="Drink 1">
+            <div class="item-details">
+                <h3>Calamansi Juice</h3>
+                <p>Php. 30.00</p> 
+				<input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/bj.jpg" alt="Drink 2">
+            <div class="item-details">
+                <h3>Buko Juice</h3>
+                <p>Php. 30.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/samalamig.png" alt="Drink 3">
+            <div class="item-details">
+                <h3>Samalamig</h3>
+                <p>Php. 25.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/ms.jpg" alt="Drink 4">
+            <div class="item-details">
+               <h3> Mango Shake</h3>
+                <p>Php. 50.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		<input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+            <img src="Menu/tablea.jpg" alt="Drink 5">
+            <div class="item-details">
+                <h3> Tsokolate de Batirol</h3>
+                <p>Php. 100.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+    </section>
+<br>
+
+
+
+    <section id="add-ons" class="category">
+        <h2>Add-ons</h2>
+        <div class="menu-item">
+		 <input type="checkbox" class="item-checkbox"> 
+            <img src="Menu/plain.jpg" alt="Add-on 1">
+            <div class="item-details">
+                <h3>Plain Rice</h3>
+                <p>Php. 20.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		 <input type="checkbox" class="item-checkbox"> 
+            <img src="Menu/fried.png" alt="Add-on 2">
+            <div class="item-details">
+                <h3>Fried Rice</h3>
+                <p>Php. 30.00</p>
+				 <input class="tb" type="number" name="item1_quantity" min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		 <input type="checkbox" class="item-checkbox"> 
+            <img src="Menu/enselada.jpg" alt="Add-on 3">
+            <div class="item-details">
+                <h3>Enseladang Pipino</h3>
+                <p>Php. 75.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		 <input type="checkbox" class="item-checkbox"> 
+            <img src="Menu/atsara.jpg" alt="Add-on 4">
+            <div class="item-details">
+                <h3>Atsara</h3>
+                <p>Php. 50.00</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+		<br>
+        <div class="menu-item">
+		 <input type="checkbox" class="item-checkbox"> 
+            <img src="Menu/indian.jpg" alt="Add-on 5">
+            <div class="item-details">
+                <h3>Indian Mango</h3>
+                <p>Php. 20.00/Serving</p>
+				 <input class="tb" type="number" name="item1_quantity"  min="0">
+            </div>
+        </div>
+    </section>
+	<br>
+	
+	
+	
+	
+	<section id="orders">
+	<div class="Rbutton">
+		<button onclick="generateReceipt()">View Order Details</button>
+		<pre id="receipt">Order Preview</pre>
+	</div>
+	</section>   
+
+	</main>
+		
+		
+<script>	
+function generateReceipt() {
+    let receiptContent = "Orders:\n\n";
+    let totalAmount = 0;
+
+   
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            
+            const itemDetails = checkbox.parentNode.querySelector('.item-details');
+            const itemName = itemDetails.querySelector('h3').textContent; 
+            const price = parseFloat(itemDetails.querySelector('p').textContent.replace('Php. ', '')); 
+            const quantity = parseFloat(itemDetails.querySelector('input[type="number"]').value); 
+            const itemTotal = price * quantity;
+			
+            receiptContent += `${itemName} x ${quantity} = Php. ${itemTotal.toFixed(2)}\n`;
+
+        
+            totalAmount += itemTotal;
+        }
+    });
+
+    
+    receiptContent += `\nTotal Amount: Php. ${totalAmount.toFixed(2)}`;
+
+    
+    const receipt = document.getElementById('receipt');
+    receipt.textContent = receiptContent;
+}
+
+		</script>
+		
+		
+	</body>
+</html>

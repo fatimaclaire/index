@@ -1,0 +1,168 @@
+body{
+	font-family: Arial;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	
+	
+}
+
+.Main{
+	
+	border: 0.5 solid black;
+	padding: 30px;
+	box-shadow: 0 30px 100px gray;
+	max-width: 1200px;
+	min-width: 1200px;
+}
+
+header {
+	margin-top: 50px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: maroon;
+
+}
+
+
+#sem{
+	color: black;
+	text-decoration-line: underline;
+	text-decoration-color: maroon;  
+}
+
+#reg{
+	background-color: maroon;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 3px;
+	margin-bottom: 0;
+}
+
+
+
+.photo1{
+	float: left;
+	margin-top: 50px;
+	margin-left: 50px;
+	height: 120px;
+    width: 120px;
+	object-fit: contain;
+}
+
+.photo2{
+	float: right;
+	margin-right: 50px;
+	margin-top: 50px;
+	height: 120px;
+    width: 120px;
+	object-fit: contain;
+}
+
+#RegInfo{
+	margin-top:0;
+	width: 100%;
+	border: 1px solid maroon;
+	border-collapse: collapse;
+	font-family: Arial;
+	
+}
+
+span{
+	color: maroon;
+}
+
+#description{
+	width: 100%;
+	text-align: left;
+	font-family: Arial;	
+	border: 1px solid maroon;
+	border-collapse: collapse;
+
+}
+
+th{
+	color: maroon;
+
+	
+}
+
+#units{
+	width: 100%;
+	font-family: Arial;
+	background-color: #fffda3;
+	font-weight: bold;
+	text-align: left;
+	border: 1px solid maroon;
+	border-collapse: collapse;
+
+	
+}
+
+#Billing{
+	color: white;
+	background-color: maroon;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+	}
+
+#Sp{
+	width: 100%;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	border: 1px solid maroon;
+	border-collapse: collapse;
+}
+
+
+
+.wb{
+	border: 1px solid maroon;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+
+.nb{
+	border-bottom: none;
+}
+
+.right-a{
+
+	border-bottom: none;
+	border-right : 1px solid maroon;
+	
+
+}
+
+.bright{
+	width: 40%;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#pay{
+	border: none;
+}
+
+.fee-nb{
+	border-top: none;
+	border-bottom: none;
+}
+
+div.a {
+  text-indent: 50px;
+}
+
+#foot{
+	margin-top: 30px;
+	width: 100%;
+	color: maroon;
+	border: 1px solid maroon;
+	border-collapse: collapse;
+	
+}

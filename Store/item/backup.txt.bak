@@ -1,0 +1,166 @@
+//NAVIGATION
+window.onload = function() {
+    showPage('home');
+};
+
+function showPage(pageId) {
+ 
+    var sections = document.querySelectorAll('.home, .jeans, .shirts, .sando, .perfume, .toys, .inventory');
+    sections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+
+
+    var selectedSection = document.getElementById(pageId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+
+
+//ITEM IMAGES
+var modal = document.getElementById("myModal");
+
+
+var modalImg = document.getElementById("modalImg");
+var imgs = document.getElementsByClassName("modal-trigger");
+var i;
+
+for (i = 0; i < imgs.length; i++) {
+    imgs[i].onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+}
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function () {
+    modal.style.display = "none";
+}
+//Image end
+
+
+
+
+// INVENTORY
+
+let stocks = {
+    jeans1: 23,
+    jeans2: 23,
+    jeans3: 35,
+    jeans4: 12,
+    shirts1: 3,
+    shirts2: 2,
+    shirts3: 10,
+    shirts4: 2,
+    sando1: 65,
+    sando2: 98,
+    sando3: 21,
+    sando4: 47,
+    perfume1: 8,
+    perfume2: 7,
+    perfume3: 9,
+    perfume4: 6,
+    toys1: 23,
+    toys2: 28,
+    toys3: 11,
+    toys4: 3,
+};
+
+// Function to show/hide pages
+function showPage(pageId) {
+    // Hide all pages
+    const pages = document.querySelectorAll('.home, .jeans, .shirts, .sando, .perfume, .toys');
+    pages.forEach(page => {
+        page.style.display = 'none';
+    });
+
+    // Show the selected page
+    document.getElementById(pageId).style.display = 'block';
+}
+
+// Function to add stock
+function addStock(itemId) {
+    const quantity = parseInt(document.getElementById('add-stock-' + itemId).value);
+    if (!isNaN(quantity) && quantity > 0) {
+        stocks[itemId] += quantity;
+        document.getElementById('stock-' + itemId).textContent = stocks[itemId];
+    } else {
+        alert('Please enter a valid quantity.');
+    }
+}
+
+// Function to deduct stock
+function deductStock(itemId) {
+    const quantity = parseInt(document.getElementById('add-stock-' + itemId).value);
+    if (!isNaN(quantity) && quantity > 0 && stocks[itemId] >= quantity) {
+        stocks[itemId] -= quantity;
+        document.getElementById('stock-' + itemId).textContent = stocks[itemId];
+    } else {
+        alert('Invalid quantity or insufficient stock.');
+    }
+}
+
+
+
+//History
+
+// Function to show sales history popup
+function showSalesHistory() {
+    // Populate sales history content
+    let salesHistoryContent = "<h3>Sales History</h3>";
+    for (const itemId in stocks) {
+        const itemName = getItemName(itemId);
+        salesHistoryContent += `<p>${itemName}: ${getSalesHistory(itemId)}</p>`;
+    }
+    document.getElementById("salesHistoryContent").innerHTML = salesHistoryContent;
+
+    // Calculate total sales and expected sales
+    const totalSales = calculateTotalSales();
+    const expectedSales = calculateExpectedSales();
+    document.getElementById("totalSales").textContent = totalSales.toFixed(2);
+    document.getElementById("expectedSales").textContent = expectedSales.toFixed(2);
+
+    // Show popup
+    const popup = document.getElementById("salesHistoryPopup");
+    popup.style.display = "block";
+}
+
+// Helper function to get item name from itemId
+function getItemName(itemId) {
+    // Implement your logic to get item name based on itemId
+    // For example, you can use a dictionary or switch case
+}
+
+// Helper function to get sales history for an item
+function getSalesHistory(itemId) {
+    // Implement your logic to get sales history for the item
+    // This could be a list of transactions, each indicating whether it's an addition or deduction
+}
+
+// Function to calculate total sales
+function calculateTotalSales() {
+    let totalSales = 0;
+    for (const itemId in stocks) {
+        const quantity = stocks[itemId];
+        const price = getPrice(itemId); // Implement this function to get price based on itemId
+        totalSales += quantity * price;
+    }
+    return totalSales;
+}
+
+// Function to calculate expected sales
+function calculateExpectedSales() {
+    let expectedSales = 0;
+    // Implement your logic to calculate expected sales based on added stocks
+    return expectedSales;
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById("salesHistoryPopup").style.display = "none";
+}

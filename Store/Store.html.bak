@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="store_style.css">
+    <title>A&G Aromatic Threads</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav id="sidebar">
+            <img id="logo" src="item/logoo.jpg" alt="me">
+            <h2>A&G Aromatic Threads Inventory</h2>
+			
+			
+            <ul>
+				<li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('jeans')">Jeans</a></li>
+                <li><a href="#" onclick="showPage('shirts')">Shirts</a></li>
+                <li><a href="#" onclick="showPage('sando')">Sando</a></li>
+                <li><a href="#" onclick="showPage('perfume')">Perfume</a></li>
+                <li><a href="#" onclick="showPage('toys')">Toys</a></li>
+            </ul>
+			
+            <footer>
+                <br><br>
+                <p>&copy; All rights reserved 2024.</p>
+            </footer>
+        </nav>
+
+<!-- HOME -->
+        <div id="home" class="home" style="display: none;">
+            <section class="home-section">
+				<div class="home-content">
+                     <h1> Welcome to A&G Aromatic Threads!</h1>
+					 <p id = "store-description">  
+					 
+					 Where fashion meets fragrance in a uniquely scented experience!<br>
+					 Step into our boutique and explore our eclectic inventory,<br>
+					 where each item tells a story of style and scent. 
+					<br><br>
+					At A&G Aromatic Threads, <br>
+					we blend fashion with fragrance to create a sensory journey unlike any other.<br>
+					Explore our unique collection today and immerse yourself in<br>
+					a world where style and scent converge in perfect harmony.
+					 </p>
+                </div>
+            </section>
+        </div>
+<!-- HOME END -->
+		
+
+<!-- JEANS -->
+<div id="jeans" class="jeans">
+<p class = "category">JEANS<h5>
+    <section class="jeans-section">
+        <div class="jean-cont">
+            
+			<div class="itemized-jeans">
+                <img class="modal-trigger" src="item/pants1.jpg" alt="Pants">
+                <h3>Vintage Low Cargo Pants</h3>
+                <input class = "item-checkbox" type="checkbox" name="item1_checkbox">
+                <p class = "price">Price: Php. 699</p>
+				<p class="stock">Stocks: <span id="stock-jeans1">23</span></p>
+                        <input name = 'item_quantity' type="number" id="add-stock-jeans1" placeholder="Enter quantity">
+                        <button onclick="addStock('jeans1')">Add</button>
+                          <button onclick="deductStock('jeans1')">Add to Cart</button>
+						
+			
+			 </div>
+			
+            <div class="itemized-jeans">
+                <img class="modal-trigger" src="item/pants2.jpg" alt="Pants">
+                <h3>Denim Flare Pants</h3>
+                <input class = "item-checkbox" type="checkbox" name="item2_checkbox">
+				<p class = "price">Price: Php. 479</p>
+				<p class="stock">Stocks: <span id="stock-jeans2">23</span></p>
+                        <input name = 'item_quantity'  type="number" id="add-stock-jeans2" placeholder="Enter quantity">
+                        <button onclick="addStock('jeans2')">Add Item</button>	
+						<button onclick="deductStock('jeans2')">Add to Cart</button>
+          
+				
+            </div>
+            <div class="itemized-jeans">
+                <img class="modal-trigger" src="item/pants3.jpg" alt="Pants">
+                <h3>Street Style Track Pants</h3>
+                <input class = "item-checkbox" type="checkbox" name="item3_checkbox">
+				<p class = "price">Price: Php. 249</p>
+				<p class="stock">Stocks: <span id="stock-jeans3">35</span></p>
+                        <input name = 'item_quantity'  type="number" id="add-stock-jeans3" placeholder="Enter quantity">
+                        <button onclick="addStock('jeans3')">Add Item</button>
+						<button onclick="deductStock('jeans3')">Add to Cart</button>
+			 </div>
+			
+			
+            <div class="itemized-jeans">
+                <img class="modal-trigger" src="item/pants4.jpg" alt="Pants">
+                <h3>Two-Way Wide Leg Trousers</h3>
+                <input class = "item-checkbox" type="checkbox" name="item4_checkbox">
+				<p class = "price">Price: Php. 389</p>
+				<p class="stock">Stocks: <span id="stock-jeans4">12</span></p>
+                        <input name = 'item_quantity'  type="number" id="add-stock-jeans4" placeholder="Enter quantity">
+                        <button onclick="addStock('jeans4')">Add</button>
+						<button onclick="deductStock('jeans4')">Add to Cart</button>
+			 </div>   
+        </div>
+		
+   
+   		<section id = "receipt-button">
+				 
+            <!-- Discount options -->
+            <div class="discount-options">
+                <input type="radio" name="discountType" value="student">Student (10% off)
+                <input type="radio" name="discountType" value="pwd">PWD (30% off)
+                <input type="radio" name="discountType" value="senior">Senior (20% off)
+            </div>
+		
+			<!-- Text box for cash input -->
+            <input type="number" id="cashInput" placeholder="Enter cash amount">
+            
+		
+				<button onclick="generateReceipt('jeans')">Generate Receipt</button>
+			<div class="receipt"> </div>
+	   
+	   </section>
+
+    </section>
+</div>
+<!-- JEANS END -->
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content-container">
+        <img class="modal-content" id="modalImg">
+    </div>
+</div>
+
+
+  <!-- SHIRTS -->
+<div id="shirts" class="shirts">
+<p class = "category">SHIRTS<h5>
+
+    <section class="shirts-section">
+        <div class="shirts-cont">
+            
+			<div class="itemized-shirts">
+                <img class="modal-trigger" src="item/shirt1.jpg" alt="Shirts">
+                <h3>Queen</h3>
+                <input class = "item-checkbox" type="checkbox" name="item5_checkbox">
+				<p class = "price">Price: Php. 2999</p>
+				<p class="stock">Stocks: <span id="stock-shirts1">3</span></p>
+                 <input name = 'item_quantity'  type="number" id="add-stock-shirts1" placeholder="Enter quantity">
+                 <button onclick="addStock('shirts1')">Add</button>
+                  <button onclick="deductStock('shirts1')">Add to Cart</button>
+            </div>
+            
+            <div class="itemized-shirts">
+                <img class="modal-trigger" src="item/shirt2.jpg" alt="Shirts">
+                <h3>Metallica</h3>
+                <input class = "item-checkbox" type="checkbox" name="item6_checkbox">
+				<p class = "price">Price: Php. 1990</p>
+				<p class="stock">Stocks: <span id="stock-shirts2">2</span></p>
+				<input name = 'item_quantity'  type="number" id="add-stock-shirts2" placeholder="Enter quantity">
+				<button onclick="addStock('shirts2')">Add</button>
+				<button onclick="deductStock('shirts2')">Add to Cart</button>
+			 </div>
+            
+            <div class="itemized-shirts">
+                <img class="modal-trigger" src="item/shirt3.jpg" alt="Shirts">
+                <h3>Paramore</h3>
+        <input class = "item-checkbox" type="checkbox" name="item7_checkbox">        
+				<p class = "price">Price: Php. 1499</p>
+				<p class="stock">Stocks: <span id="stock-shirts3">10</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-shirts3" placeholder="Enter quantity">
+                 <button onclick="addStock('shirts3')">Add</button>
+                 <button onclick="deductStock('shirts3')">Add to Cart</button>    
+            </div>
+            
+            <div class="itemized-shirts">
+                <img class="modal-trigger" src="item/shirt4.jpg" alt="Shirts">
+                <h3>The Beatles</h3>
+      <input class = "item-checkbox" type="checkbox" name="item8_checkbox">          
+				<p class = "price">Price: Php. 3499</p>
+				<p class="stock">Stocks: <span id="stock-shirts4">2</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-shirts4" placeholder="Enter quantity">     
+				<button onclick="addStock('shirts4')">Add</button>
+                 <button onclick="deductStock('shirts4')">Add to Cart</button>
+			</div>  
+		</div>
+  
+   		<section id = "receipt-button">	 
+            <!-- Discount options -->
+            <div class="discount-options">
+                <input type="radio" name="discountType" value="student">Student (10% off)
+                <input type="radio" name="discountType" value="pwd">PWD (30% off)
+                <input type="radio" name="discountType" value="senior">Senior (20% off)
+            </div>
+		
+			<!-- Text box for cash input -->
+            <input type="number" id="cashInput" placeholder="Enter cash amount">
+			<!-- Button -->
+				<button onclick="generateReceipt('shirts')">Generate Receipt</button>
+			<div class="receipt"> </div>
+	   </section>
+	   
+	   
+	   
+    </section>
+</div>
+			
+<!-- SHIRTS END -->
+			
+			
+			
+  <!-- SANDO -->
+<div id="sando" class="sando">
+<p class = "category">SANDO<h5>
+    <section class="sando-section">
+        <div class="sando-cont">
+            
+			<div class="itemized-sando">
+                <img class="modal-trigger" src="item/sando1.jpg" alt="Sando">
+                <h3>Rib-Knit Top for Women (3 on 1)</h3>
+        <input class = "item-checkbox" type="checkbox" name="item9_checkbox">        
+				<p class = "price">Price: Php. 799</p>
+				<p class="stock">Stocks: <span id="stock-sando1">65</span></p>
+                 <input name = 'item_quantity'  type="number" id="add-stock-sando1" placeholder="Enter quantity">
+                 <button onclick="addStock('sando1')">Add</button>
+                 <button onclick="deductStock('sando1')">Add to Cart</button>       
+            </div>
+            
+            
+            <div class="itemized-sando">
+                <img class="modal-trigger" src="item/sando2.jpg" alt="Sando">
+                <h3>Basic Sleeveless Top </h3>
+         <input class = "item-checkbox" type="checkbox" name="item10_checkbox">       
+				<p class = "price">Price: Php. 199</p>
+				<p class="stock">Stocks: <span id="stock-sando2">98</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-sando2" placeholder="Enter quantity">
+                 <button onclick="addStock('sando2')">Add</button>
+                <button onclick="deductStock('sando2')">Add to Cart</button>     
+            </div>
+            
+            
+            <div class="itemized-sando">
+                <img class="modal-trigger" src="item/sando5.jpg" alt="Sando">
+                <h3>Men's Tanktop</h3>
+				<input class = "item-checkbox" type="checkbox" name="item11_checkbox">        
+				<p class = "price">Price: Php. 349</p>
+				<p class="stock">Stocks: <span id="stock-sando3">21</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-sando3" placeholder="Enter quantity">
+                <button onclick="addStock('sando3')">Add</button>
+                <button onclick="deductStock('sando3')">Add to Cart</button>    
+            </div>
+            
+            <div class="itemized-sando">
+                <img class="modal-trigger" src="item/sando4.jpg" alt="Sando">
+                <h3>Men's Knitted Sando</h3>
+				<input class = "item-checkbox" type="checkbox" name="item12_checkbox">         
+				<p class = "price">Price: Php. 499</p>
+				<p class="stock">Stocks: <span id="stock-sando4">47</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-sando4" placeholder="Enter quantity">
+				<button onclick="addStock('sando4')">Add</button>
+                <button onclick="deductStock('sando4')">Add to Cart</button>    
+		   </div>
+        </div>
+	
+	
+			<section id = "receipt-button">	 
+            <!-- Discount options -->
+            <div class="discount-options">
+                <input type="radio" name="discountType" value="student">Student (10% off)
+                <input type="radio" name="discountType" value="pwd">PWD (30% off)
+                <input type="radio" name="discountType" value="senior">Senior (20% off)
+            </div>
+		
+			<!-- Text box for cash input -->
+            <input type="number" id="cashInput" placeholder="Enter cash amount">
+			<!-- Button -->
+				<button onclick="generateReceipt('sando')">Generate Receipt</button>
+			<div class="receipt"> </div>
+	   </section>
+	   
+	   
+    </section>
+</div>
+			
+<!-- SANDO END -->
+
+
+
+  <!-- PERFUME -->
+<div id="perfume" class="perfume">
+<p class = "category">PERFUMES<h5>
+    <section class="perfume-section">
+        <div class="perfume-cont">
+            
+			<div class="itemized-perfume">
+                <img class="modal-trigger" src="item/perfume1.jpg" alt="Perfume">
+                <h3>Paco Rabanne for Women</h3>
+				<input class = "item-checkbox" type="checkbox" name="item13_checkbox">       
+				<p class = "price">Price: Php. 14479</p>
+				<p class="stock">Stocks: <span id="stock-perfume1">8</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-perfume1" placeholder="Enter quantity">
+                <button onclick="addStock('perfume1')">Add</button>
+                <button onclick="deductStock('perfume1')">Add to Cart</button>     
+            </div>
+            
+            
+            <div class="itemized-perfume">
+                <img class="modal-trigger" src="item/perfume2.jpg" alt="Perfume">
+                <h3>Black Opium </h3>
+				<input class = "item-checkbox" type="checkbox" name="item14_checkbox">          
+				<p class = "price">Price: Php. 16899</p>
+				<p class="stock">Stocks: <span id="stock-perfume2">7</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-perfume2" placeholder="Enter quantity">
+                <button onclick="addStock('perfume2')">Add</button>
+                 <button onclick="deductStock('perfume2')">Add to Cart</button>    
+            </div>
+            
+            <div class="itemized-perfume">
+                <img class="modal-trigger" src="item/perfume3.jpg" alt="Perfume">
+                <h3>Tom Ford</h3>
+				<input class = "item-checkbox" type="checkbox" name="item15_checkbox">         
+				<p class = "price">Price: Php. 18999</p>
+				<p class="stock">Stocks: <span id="stock-perfume3">9</span></p>
+                 <input name = 'item_quantity'  type="number" id="add-stock-perfume3" placeholder="Enter quantity">
+                 <button onclick="addStock('perfume3')">Add</button>
+                <button onclick="deductStock('perfume3')">Add to Cart</button>     
+            </div>
+            
+            <div class="itemized-perfume">
+                <img class="modal-trigger" src="item/perfume4.jpg" alt="Perfume">
+                <h3>Dolce & Gabbana</h3>
+       <input class = "item-checkbox" type="checkbox" name="item16_checkbox">         
+				<p class = "price">Price: Php. 9889</p>
+				<p class="stock">Stocks: <span id="stock-perfume4">6</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-perfume4" placeholder="Enter quantity">
+                 <button onclick="addStock('perfume4')">Add</button>
+                 <button onclick="deductStock('perfume4')">Add to Cart</button>    
+            </div>
+        </div>
+		
+		<section id = "receipt-button">	 
+            <!-- Discount options -->
+            <div class="discount-options">
+                <input type="radio" name="discountType" value="student">Student (10% off)
+                <input type="radio" name="discountType" value="pwd">PWD (30% off)
+                <input type="radio" name="discountType" value="senior">Senior (20% off)
+            </div>
+		
+			<!-- Text box for cash input -->
+            <input type="number" id="cashInput" placeholder="Enter cash amount">
+			<!-- Button -->
+				<button onclick="generateReceipt('perfume')">Generate Receipt</button>
+			<div class="receipt"> </div>
+	   </section>
+		
+		
+    </section>
+</div>
+			 
+<!-- PERFUME END -->
+	
+	
+	
+  <!-- TOYS -->
+ <div id="toys" class="toys">
+ <p class = "category">TOYS<h5>
+    <section class="toys-section">
+        <div class="toys-cont">
+            
+			<div class="itemized-toys">
+                <img class="modal-trigger" src="item/toy1.jpg" alt="Toys">
+                <h3>Cinnamoroll Squishmallow</h3>
+				<input class = "item-checkbox" type="checkbox" name="item17_checkbox">        
+				<p class = "price">Price: Php. 549</p>
+				<p class="stock">Stocks: <span id="stock-toys1">23</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-toys1" placeholder="Enter quantity">
+                 <button onclick="addStock('toys1')">Add</button>
+				  <button onclick="deductStock('toys1')">Add to Cart</button> 
+                 
+                   
+            </div>
+            
+            
+            <div class="itemized-toys">
+                <img class="modal-trigger" src="item/toy2.jpg" alt="Toys">
+                <h3>Bunny Easter Squishmallow </h3>
+				<input class = "item-checkbox" type="checkbox" name="item18_checkbox">         
+				<p class = "price">Price: Php. 349</p>
+				<p class="stock">Stocks: <span id="stock-toys2">28</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-toys2" placeholder="Enter quantity">
+                <button onclick="addStock('toys2')">Add</button>
+                  <button onclick="deductStock('toys2')">Add to Cart</button>        
+            </div>
+            
+            <div class="itemized-toys">
+                <img class="modal-trigger" src="item/toy3.jpg" alt="Toys">
+                <h3>Christmas Penguin Squishmallow</h3>
+				<input class = "item-checkbox" type="checkbox" name="item19_checkbox">        
+				<p class = "price">Price: Php. 599</p>
+				<p class="stock">Stocks: <span id="stock-toys3">11</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-toys3" placeholder="Enter quantity">
+                <button onclick="addStock('toys3')">Add</button> 
+					  <button onclick="deductStock('toys3')">Add to Cart</button> 
+            </div>
+            
+            <div class="itemized-toys">
+                <img class="modal-trigger" src="item/toy5.jpg" alt="Toys">
+                <h3>Pelucia Squishmallow</h3>
+				<input class = "item-checkbox" type="checkbox" name="item20_checkbox">        
+				<p class = "price">Price: Php. 499</p>
+				<p class="stock">Stocks: <span id="stock-toys4">3</span></p>
+                <input name = 'item_quantity'  type="number" id="add-stock-toys4" placeholder="Enter quantity">
+				<button onclick="addStock('toys4')">Add</button>
+                   <button onclick="deductStock('toys4')">Add to Cart</button> 
+			</div>
+			
+			    
+			
+        </div>
+		<section id = "receipt-button">
+				<button onclick="generateReceipt('toys')">Generate Receipt</button>
+			<div class="receipt"> </div>
+	   </section>
+    </section>
+</div>
+<!-- TOYS END -->
+		
+
+
+    </div>
+
+    <script src="a.js"></script>
+	
+</body>
+</html>

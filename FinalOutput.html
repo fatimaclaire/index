@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="finals.css" rel="stylesheet">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="Zpics\scs.jfif"  class="d-inline-block align-top navbar-brand-img" alt="Your Photo">
+      <span class="navbar-brand-name">Fatima Claire P. Paterno</span>
+    </a>
+	
+	<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutMeModal">
+     <i class="fas fa-info-circle" style="font-size: 30px;"></i>
+    </a>
+  </li>
+</ul>
+
+<div class="modal fade" id="aboutMeModal" tabindex="-1" role="dialog" aria-labelledby="aboutMeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutMeModalLabel">About Me</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center"> 
+	   <img id = "pic" src="Zpics\me.jpg" width="150" height="150" class="d-inline-block align-top navbar-brand-img" alt="Your Photo">
+        <p><strong>Name:</strong> Fatima Claire P. Paterno</p>
+        <p><strong>Year&Section:</strong> 3-2</p>
+        <p><strong>Course:</strong> Bachelor of Science in Infromation Technology</p>
+		 <p><strong>Subect Code:</strong> ITEC87</p>
+		 <p><strong>Course Desciption:</strong> Web Systems & Technologies</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </nav>
+
+  <div class="container mt-5">
+    <div class="jumbotron text-center">
+      <div class="typewriter">
+        <h1 class="display-4">Welcome, <span id="usernamePlaceholder"></span></h1>
+      </div>
+      <p class="lead">This page features a compilation of outputs from ITEC87: Web Systems & Technologies, aimed at enhancing web development skills through proficiency in HTML for structuring web content and CSS for styling and formatting the content, and Bootstrap is utilized for creating responsive and mobile-friendly web designs.</p>
+      <hr class="my-4">
+      <p>Click the arrows below to see outputs.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 mb-4 fade-in-hidden">
+        <div class="jumbotron text-center position-relative">
+          <img src="Zpics\2.jpg" class="img-fluid mb-3 img-circle" alt="Image for Page 1">
+          <h4 class="bordered-h4">RESUME</h4>
+          <p class="descriptions">This page contains the resume, which includes an individual's professional background, including education, work experience, and skills.</p>
+          <a href="Resume\paternoBS.html" target="_blank">
+            <span class="arrow-link" style="font-size: 5em;">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 fade-in-hidden">
+        <div class="jumbotron text-center position-relative">
+          <img src="Zpics\3.jpg" class="img-fluid mb-3 img-circle" alt="Image for Page 2">
+          <h4 class="bordered-h4">MENU</h4>
+          <p class="descriptions">This page contains the restaurant menu of Sinsayan sa Gigilid, detailing various food and beverage options available to diners, including descriptions and prices.</p>
+          <a href="Menu\PATERNO_FATIMACLAIRE.html" target="_blank">
+            <span class="arrow-link" style="font-size: 5em;">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 fade-in-hidden">
+        <div class="jumbotron text-center position-relative">
+          <img src="Zpics\1.jpg" class="img-fluid mb-3 img-circle" alt="Image for Page 3">
+          <h4 class="bordered-h4">C O R</h4>
+          <p class="descriptions">This page contains the certificate of registration, an official document verifying an individual’s is enrolled and studying currently at City College of Tagaytay.</p>
+          <a href="COR\Paterno_COR.html" target="_blank">
+            <span class="arrow-link" style="font-size: 5em;">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 fade-in-hidden">
+        <div class="jumbotron text-center position-relative">
+          <img src="Zpics\4.jpg" class="img-fluid mb-3 img-circle" alt="Image for Page 4">
+          <h4 class="bordered-h4">STORE</h4>
+          <p class="descriptions">This page contains information about the store, A&G Aromatic Threads, an establishment selling different goods and services, featuring the best  and limited edition items.</p>
+          <a href="Store\Store.html" target="_blank">
+            <span class="arrow-link" style="font-size: 5em;">&#8594;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <footer class="footer mt-auto py-3 ">
+    <div class="container text-center">
+      <span class="text-light">&copyAll rights reserved 2024</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    function getUrlParameter(name) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(window.location.href);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+
+    var username = getUrlParameter('username');
+
+    if (username) {
+        document.getElementById('usernamePlaceholder').textContent = username + "!";
+    } else {
+        document.getElementById('usernamePlaceholder').textContent = "my Portfolio!";
+    }
+
+    var elements = document.querySelectorAll('.fade-in-hidden');
+    elements.forEach(function(element, index) {
+        setTimeout(function() {
+            element.classList.remove('fade-in-hidden');
+            element.classList.add('fade-in');
+        }, index * 500);
+    });
+
+    elements.forEach(function(element) {
+        element.addEventListener('mouseenter', function() {
+            element.classList.add('wiggle');
+        });
+        element.addEventListener('animationend', function(event) {
+            if (event.animationName === 'wiggle') {
+                element.classList.remove('wiggle');
+            }
+        });
+    });
+});
+  </script>
+</body>
+</html>

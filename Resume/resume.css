@@ -1,0 +1,52 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #1C191B;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #E668BD;
+        }
+
+        h3 {
+            font-family: Verdana;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+            color: #E668BD;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-picture {
+            margin-bottom: 10px;
+        }
+
+        .profile-picture img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+			margin-bottom: 50px;
+            border: 2px solid #A4358E;
+        }
+
+        .table {
+            color: #fff;
+            border: none; 
+            text-align: left;
+        }
+
+        .table td,
+        .table th {
+            border: none;
+        }
+		
+		

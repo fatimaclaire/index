@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<link rel="stylesheet" href="main.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+    <div class="card border-violet shadow">
+        <div class="card-body text-center"> 
+            <img id="cct" src="Zpics\scs.jfif" alt="Description of the image" class="center-img"> 
+            <h3 class="text-violet mb-4">Welcome to my Page</h3>
+            <form id="loginForm" action="javascript:void(0);">
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" id="username" placeholder="Enter your name" style="font-size: 16px;" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-lg btn-violet">Enter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var username = document.getElementById('username').value;
+    if (username.trim() === '') {
+        alert('Please enter a username.');
+        return;
+    }
+
+    window.location.href = 'FinalOutput.html?username=' + encodeURIComponent(username);
+});
+</script>
+
+<style>
+body {
+    font-family: 'Poppins';
+    font-size: 22px;
+    background-color: #dfcafc;
+    color: #5a217a;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#cct {
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+}
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    animation: flip 10s linear infinite;
+}
+
+@keyframes flip {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.card {
+    background-color: #eadbff;
+    border: 2px solid #ffffff;
+	border-radius: 10%;
+	width: 500px;
+    box-shadow: 0 0 20px rgba(1, 0, 0, 0.5);
+}
+
+.border-violet {
+    border-color: #9b59b6; 
+	width: 500px;
+	height: 500px;
+}
+
+.card-body {
+    padding: 40px;
+}
+
+.text-violet {
+    color: #8e44ad; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.form-control {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #54188f; 
+    transition: border-color 0.3s ease;
+    color: #240642; 
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: #240642;
+}
+
+.btn-violet {
+    margin-top: 20px;
+    background-color: #c082fa; 
+	color: #432063;
+    border: none;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.btn-violet:hover {
+	 background-color: #3a1f54; 
+    color: #d8b4fa;
+}
+
+.btn-violet:focus,
+.btn-violet.focus {
+    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.5);
+}
+</style>
+
+</body>
+</html>
